@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 0 174 255; /* #00aeff */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0c0c0c] text-gray-100 font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-300 rounded-md;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-300 mb-12 max-w-3xl mx-auto;
+  }
+
+  .service-card {
+    @apply bg-[#1a1a1a] hover:bg-[#242424] border-b-4 border-transparent hover:border-primary rounded-lg p-6 transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-gray-300 hover:text-primary transition-colors duration-300;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+  }
+}
